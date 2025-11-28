@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">QR Master</string>
+    <string name="title_scan">Scan</string>
+    <string name="title_generate">Generate</string>
+    <string name="hint_enter_text">Enter text or URL</string>
+    <string name="btn_generate">Generate QR</string>
+    <string name="btn_share">Share</string>
+    <string name="btn_save">Save</string>
+    <string name="permission_camera_rationale">Camera permission is needed to scan QR codes.</string>
+</resources>

@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "com.example.newqrcode.app-debug-56:/drawable_ic_share.xml.flat",
+        "source": "com.example.newqrcode.app-main-58:/drawable/ic_share.xml"
+    },
+    {
+        "merged": "com.example.newqrcode.app-debug-56:/drawable_scanner_overlay.xml.flat",
+        "source": "com.example.newqrcode.app-main-58:/drawable/scanner_overlay.xml"
+    },
+    {
+        "merged": "com.example.newqrcode.app-debug-56:/xml_backup_rules.xml.flat",
+        "source": "com.example.newqrcode.app-main-58:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.newqrcode.app-debug-56:/layout_fragment_generate.xml.flat",
+        "source": "com.example.newqrcode.app-main-58:/layout/fragment_generate.xml"
+    },
+    {
+        "merged": "com.example.newqrcode.app-debug-56:/drawable_ic_scan.xml.flat",
+        "source": "com.example.newqrcode.app-main-58:/drawable/ic_scan.xml"
+    },
+    {
+        "merged": "com.example.newqrcode.app-debug-56:/menu_bottom_nav_menu.xml.flat",
+        "source": "com.example.newqrcode.app-main-58:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "com.example.newqrcode.app-debug-56:/drawable_ic_save.xml.flat",
+        "source": "com.example.newqrcode.app-main-58:/drawable/ic_save.xml"
+    },
+    {
+        "merged": "com.example.newqrcode.app-debug-56:/layout_activity_main.xml.flat",
+        "source": "com.example.newqrcode.app-main-58:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.newqrcode.app-debug-56:/drawable_ic_qr_code.xml.flat",
+        "source": "com.example.newqrcode.app-main-58:/drawable/ic_qr_code.xml"
+    },
+    {
+        "merged": "com.example.newqrcode.app-debug-56:/xml_file_paths.xml.flat",
+        "source": "com.example.newqrcode.app-main-58:/xml/file_paths.xml"
+    },
+    {
+        "merged": "com.example.newqrcode.app-debug-56:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.newqrcode.app-main-58:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.newqrcode.app-debug-56:/layout_fragment_scan.xml.flat",
+        "source": "com.example.newqrcode.app-main-58:/layout/fragment_scan.xml"
+    }
+]

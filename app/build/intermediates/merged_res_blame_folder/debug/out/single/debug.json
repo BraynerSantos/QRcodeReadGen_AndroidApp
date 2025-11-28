@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "com.example.newqrcode.app-merged_res-54:/navigation_nav_graph.xml.flat",
+        "source": "com.example.newqrcode.app-main-56:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "com.example.newqrcode.app-merged_res-54:/layout_fragment_scan.xml.flat",
+        "source": "com.example.newqrcode.app-main-56:/layout/fragment_scan.xml"
+    },
+    {
+        "merged": "com.example.newqrcode.app-merged_res-54:/drawable_ic_qr_code.xml.flat",
+        "source": "com.example.newqrcode.app-main-56:/drawable/ic_qr_code.xml"
+    },
+    {
+        "merged": "com.example.newqrcode.app-merged_res-54:/xml_backup_rules.xml.flat",
+        "source": "com.example.newqrcode.app-main-56:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.newqrcode.app-merged_res-54:/layout_fragment_generate.xml.flat",
+        "source": "com.example.newqrcode.app-main-56:/layout/fragment_generate.xml"
+    },
+    {
+        "merged": "com.example.newqrcode.app-merged_res-54:/drawable_ic_scan.xml.flat",
+        "source": "com.example.newqrcode.app-main-56:/drawable/ic_scan.xml"
+    },
+    {
+        "merged": "com.example.newqrcode.app-merged_res-54:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.newqrcode.app-main-56:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.newqrcode.app-merged_res-54:/drawable_scanner_overlay.xml.flat",
+        "source": "com.example.newqrcode.app-main-56:/drawable/scanner_overlay.xml"
+    },
+    {
+        "merged": "com.example.newqrcode.app-merged_res-54:/menu_bottom_nav_menu.xml.flat",
+        "source": "com.example.newqrcode.app-main-56:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "com.example.newqrcode.app-merged_res-54:/layout_activity_main.xml.flat",
+        "source": "com.example.newqrcode.app-main-56:/layout/activity_main.xml"
+    }
+]

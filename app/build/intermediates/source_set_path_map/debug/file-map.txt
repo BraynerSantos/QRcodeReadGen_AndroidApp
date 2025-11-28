@@ -1,0 +1,57 @@
+com.example.newqrcode.app-jetified-fragment-ktx-1.6.2-0 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\011f2238a49dcacd4e7cd4a959f983b3\transformed\jetified-fragment-ktx-1.6.2\res
+com.example.newqrcode.app-lifecycle-viewmodel-2.6.2-1 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\01c64e133ee4c4c742adbfc8cb12fef4\transformed\lifecycle-viewmodel-2.6.2\res
+com.example.newqrcode.app-jetified-core-ktx-1.12.0-2 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\05572574b7398c1ca9e7aed718a1f617\transformed\jetified-core-ktx-1.12.0\res
+com.example.newqrcode.app-core-1.12.0-3 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\102bb4ca6e8b3e009636483291d8df3f\transformed\core-1.12.0\res
+com.example.newqrcode.app-slidingpanelayout-1.2.0-4 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\109e7126339c08f303b63de794fee55a\transformed\slidingpanelayout-1.2.0\res
+com.example.newqrcode.app-recyclerview-1.1.0-5 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\1693b9e5d6854f79b950d6df03b57f90\transformed\recyclerview-1.1.0\res
+com.example.newqrcode.app-navigation-ui-2.7.6-6 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\179ddb2b1560b834b13931bb2b3d63b1\transformed\navigation-ui-2.7.6\res
+com.example.newqrcode.app-jetified-camera-video-1.3.1-7 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\1edc74d6c8751bbcafe6627cf685a25c\transformed\jetified-camera-video-1.3.1\res
+com.example.newqrcode.app-jetified-appcompat-resources-1.6.1-8 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\24961bca0290488d700bdd1d2c53cf32\transformed\jetified-appcompat-resources-1.6.1\res
+com.example.newqrcode.app-drawerlayout-1.1.1-9 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\27a03a4e07c00e27e7b038c7c131ce2c\transformed\drawerlayout-1.1.1\res
+com.example.newqrcode.app-jetified-lifecycle-viewmodel-savedstate-2.6.2-10 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\2d9a321b1f89eb43f1d14aaafcd0039c\transformed\jetified-lifecycle-viewmodel-savedstate-2.6.2\res
+com.example.newqrcode.app-jetified-camera-lifecycle-1.3.1-11 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\37471587a957ee14cf0c61b2f5355297\transformed\jetified-camera-lifecycle-1.3.1\res
+com.example.newqrcode.app-transition-1.4.1-12 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\44bf01bb891f0db306dc4d8dff58f474\transformed\transition-1.4.1\res
+com.example.newqrcode.app-jetified-camera-core-1.3.1-13 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\4694b4bcf303578dee8f5a5bc794e143\transformed\jetified-camera-core-1.3.1\res
+com.example.newqrcode.app-jetified-emoji2-1.2.0-14 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\5ac437853ce22cc4f70dc376ad89b568\transformed\jetified-emoji2-1.2.0\res
+com.example.newqrcode.app-material-1.11.0-15 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\5e00f626b2b950af2f602e73584cc21f\transformed\material-1.11.0\res
+com.example.newqrcode.app-jetified-savedstate-1.2.1-16 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\5f8e7eb81826db5fd17717c04eacc7f2\transformed\jetified-savedstate-1.2.1\res
+com.example.newqrcode.app-jetified-emoji2-views-helper-1.2.0-17 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\6b7a8e36d6dbf339aec1380b4c4e8aa7\transformed\jetified-emoji2-views-helper-1.2.0\res
+com.example.newqrcode.app-lifecycle-livedata-core-2.6.2-18 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\70fd334f038e6088091ff03a5c9adef9\transformed\lifecycle-livedata-core-2.6.2\res
+com.example.newqrcode.app-jetified-play-services-basement-18.1.0-19 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\71b5002d86517641d7767f8c9bf4e899\transformed\jetified-play-services-basement-18.1.0\res
+com.example.newqrcode.app-coordinatorlayout-1.1.0-20 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\769fe60dc4d5b71d723f7f8d3eeab412\transformed\coordinatorlayout-1.1.0\res
+com.example.newqrcode.app-navigation-common-ktx-2.7.6-21 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\774db13eb7e3bbf3d43ef8b66bd52d72\transformed\navigation-common-ktx-2.7.6\res
+com.example.newqrcode.app-jetified-camera-view-1.3.1-22 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\797b8accd8191797d74ece09d964496e\transformed\jetified-camera-view-1.3.1\res
+com.example.newqrcode.app-lifecycle-livedata-2.6.2-23 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\7b13904a53ace6cc1e8f93a052b17cc9\transformed\lifecycle-livedata-2.6.2\res
+com.example.newqrcode.app-jetified-viewpager2-1.0.0-24 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\7cc6933a09eed9be3241c15c5f299ccd\transformed\jetified-viewpager2-1.0.0\res
+com.example.newqrcode.app-appcompat-1.6.1-25 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\818440df55c5b22950fdce982f2f1b19\transformed\appcompat-1.6.1\res
+com.example.newqrcode.app-navigation-ui-ktx-2.7.6-26 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\840b2e46bbcc23ca264b5058dd3e93a8\transformed\navigation-ui-ktx-2.7.6\res
+com.example.newqrcode.app-jetified-activity-1.8.0-27 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\852125d9013c7dc8f71f98146d5b02cb\transformed\jetified-activity-1.8.0\res
+com.example.newqrcode.app-navigation-runtime-2.7.6-28 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\86f4e040ad7aaece7e0d73d51d142aa3\transformed\navigation-runtime-2.7.6\res
+com.example.newqrcode.app-jetified-lifecycle-runtime-ktx-2.6.2-29 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\8b9c6479aecbfb61bfadd10de7ca6158\transformed\jetified-lifecycle-runtime-ktx-2.6.2\res
+com.example.newqrcode.app-jetified-profileinstaller-1.3.0-30 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\95534bd726c5df624a9db169c954d74b\transformed\jetified-profileinstaller-1.3.0\res
+com.example.newqrcode.app-cardview-1.0.0-31 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\9c406f22b097e9e801a66122e0243e1c\transformed\cardview-1.0.0\res
+com.example.newqrcode.app-jetified-annotation-experimental-1.3.1-32 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\9db0025bba2e099d87e4ab95fcfc661a\transformed\jetified-annotation-experimental-1.3.1\res
+com.example.newqrcode.app-navigation-fragment-2.7.6-33 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\9e7a418c6efc91963848ff0c307c37a9\transformed\navigation-fragment-2.7.6\res
+com.example.newqrcode.app-constraintlayout-2.1.4-34 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\a01b36b83903ec271a6d7032067adc73\transformed\constraintlayout-2.1.4\res
+com.example.newqrcode.app-jetified-lifecycle-viewmodel-ktx-2.6.2-35 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\a7ce9b74e625e1d7da1e1c231557c80d\transformed\jetified-lifecycle-viewmodel-ktx-2.6.2\res
+com.example.newqrcode.app-navigation-runtime-ktx-2.7.6-36 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\b1b48aa5596eff2d4e150dc17879275d\transformed\navigation-runtime-ktx-2.7.6\res
+com.example.newqrcode.app-jetified-window-1.0.0-37 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\b8bbfc8ad7fb709204f6c89bec5daf1c\transformed\jetified-window-1.0.0\res
+com.example.newqrcode.app-core-runtime-2.2.0-38 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\c23eec21750b23a5497c695e93800d88\transformed\core-runtime-2.2.0\res
+com.example.newqrcode.app-jetified-lifecycle-process-2.6.2-39 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\c4e65c45bec527a4a45d03673ca2cb12\transformed\jetified-lifecycle-process-2.6.2\res
+com.example.newqrcode.app-jetified-lifecycle-livedata-core-ktx-2.6.2-40 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\c87ad31e4aa9b1984d0c092a810d86a6\transformed\jetified-lifecycle-livedata-core-ktx-2.6.2\res
+com.example.newqrcode.app-jetified-camera-camera2-1.3.1-41 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\cabcac7842227819288d458e8b3c69b7\transformed\jetified-camera-camera2-1.3.1\res
+com.example.newqrcode.app-fragment-1.6.2-42 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\cf28c5dc808b014795409aaea814843c\transformed\fragment-1.6.2\res
+com.example.newqrcode.app-navigation-fragment-ktx-2.7.6-43 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\d10c6d5788719267491aae5739907afe\transformed\navigation-fragment-ktx-2.7.6\res
+com.example.newqrcode.app-jetified-play-services-base-18.1.0-44 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\d1317cf0da892e022415da0a957aafb7\transformed\jetified-play-services-base-18.1.0\res
+com.example.newqrcode.app-jetified-startup-runtime-1.1.1-45 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\d9666d9c3f07a7f9ae01318d4ab274fb\transformed\jetified-startup-runtime-1.1.1\res
+com.example.newqrcode.app-lifecycle-runtime-2.6.2-46 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\dba95b7cf1dfaa6e7b48ea2eed06feaa\transformed\lifecycle-runtime-2.6.2\res
+com.example.newqrcode.app-jetified-activity-ktx-1.8.0-47 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\e56bee6ce3e3d42e37bfdacce0ff0767\transformed\jetified-activity-ktx-1.8.0\res
+com.example.newqrcode.app-jetified-savedstate-ktx-1.2.1-48 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\ea7fa2000334e44304e7506d31ad82a0\transformed\jetified-savedstate-ktx-1.2.1\res
+com.example.newqrcode.app-navigation-common-2.7.6-49 C:\Users\santo\.gradle\caches\9.0-milestone-1\transforms\f262a50332d58d99e2fc5e224a3a87d8\transformed\navigation-common-2.7.6\res
+com.example.newqrcode.app-pngs-50 E:\Android Studio\NewQRcode\app\build\generated\res\pngs\debug
+com.example.newqrcode.app-resValues-51 E:\Android Studio\NewQRcode\app\build\generated\res\resValues\debug
+com.example.newqrcode.app-packageDebugResources-52 E:\Android Studio\NewQRcode\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.newqrcode.app-packageDebugResources-53 E:\Android Studio\NewQRcode\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.newqrcode.app-merged_res-54 E:\Android Studio\NewQRcode\app\build\intermediates\merged_res\debug
+com.example.newqrcode.app-debug-55 E:\Android Studio\NewQRcode\app\src\debug\res
+com.example.newqrcode.app-main-56 E:\Android Studio\NewQRcode\app\src\main\res
