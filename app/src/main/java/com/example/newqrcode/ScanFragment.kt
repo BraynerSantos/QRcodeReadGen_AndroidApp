@@ -37,6 +37,10 @@ class ScanFragment : Fragment() {
             }
         }
 
+    private val pickImageLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: android.net.Uri? ->
+        uri?.let { processImage(it) }
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -49,6 +53,10 @@ class ScanFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         cameraExecutor = Executors.newSingleThreadExecutor()
 
+        binding.btnGallery.setOnClickListener {
+            pickImageLauncher.launch("image/*")
+        }
+
         if (ContextCompat.checkSelfPermission(
                 requireContext(),
                 Manifest.permission.CAMERA
@@ -60,16 +68,47 @@ class ScanFragment : Fragment() {
         }
     }
 
+    private fun processImage(uri: android.net.Uri) {
+        try {
+            val image = InputImage.fromFilePath(requireContext(), uri)
+            val scanner = BarcodeScanning.getClient()
+            scanner.process(image)
+                .addOnSuccessListener { barcodes ->
+                    if (barcodes.isNotEmpty()) {
+                        showResult(barcodes[0].rawValue ?: "")
+                    } else {
+                        Toast.makeText(requireContext(), "No QR code found", Toast.LENGTH_SHORT).show()
+                    }
+                }
+                .addOnFailureListener {
+                    Toast.makeText(requireContext(), "Failed to scan image", Toast.LENGTH_SHORT).show()
+                }
+        } catch (e: java.io.IOException) {
+            e.printStackTrace()
+            Toast.makeText(requireContext(), "Error loading image", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun showResult(rawValue: String) {
+        if (childFragmentManager.findFragmentByTag("ResultBottomSheet") == null) {
+            activity?.runOnUiThread {
+                val bottomSheet = ResultBottomSheet()
+                bottomSheet.setContent(rawValue)
+                bottomSheet.show(childFragmentManager, "ResultBottomSheet")
+            }
+        }
+    }
+
     private fun startCamera() {
         val cameraProviderFuture = ProcessCameraProvider.getInstance(requireContext())
 
-        cameraProviderFuture.addListener({
+        cameraProviderFuture.addListener(Runnable {
             val cameraProvider: ProcessCameraProvider = cameraProviderFuture.get()
 
             val preview = Preview.Builder()
                 .build()
                 .also {
-                    it.setSurfaceProvider(binding.viewFinder.surfaceProvider)
+                    it.surfaceProvider = binding.viewFinder.surfaceProvider
                 }
 
             val imageAnalyzer = ImageAnalysis.Builder()
@@ -78,12 +117,7 @@ class ScanFragment : Fragment() {
                 .also {
                     it.setAnalyzer(cameraExecutor, BarcodeAnalyzer { barcodes ->
                         if (barcodes.isNotEmpty()) {
-                            val barcode = barcodes[0]
-                            val rawValue = barcode.rawValue
-                            activity?.runOnUiThread {
-                                binding.textResult.text = rawValue
-                                // Here you could add logic to open URL or copy to clipboard
-                            }
+                            showResult(barcodes[0].rawValue ?: "")
                         }
                     })
                 }

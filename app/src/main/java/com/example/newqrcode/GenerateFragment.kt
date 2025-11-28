@@ -19,6 +19,8 @@ class GenerateFragment : Fragment() {
     private var _binding: FragmentGenerateBinding? = null
     private val binding get() = _binding!!
 
+    private var currentBitmap: Bitmap? = null
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -27,21 +29,31 @@ class GenerateFragment : Fragment() {
         return binding.root
     }
 
-    private var currentBitmap: Bitmap? = null
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnGenerate.setOnClickListener {
             val text = binding.editInput.text.toString()
             if (text.isNotBlank()) {
-                try {
-                    currentBitmap = generateQRCode(text)
-                    binding.imageQr.setImageBitmap(currentBitmap)
-                    binding.layoutActions.visibility = View.VISIBLE
-                } catch (e: WriterException) {
-                    e.printStackTrace()
-                    Toast.makeText(requireContext(), "Error generating QR code", Toast.LENGTH_SHORT).show()
+                // 1. Validate Input
+                val validationError = SafetyValidator.validateInputForGeneration(text)
+                if (validationError != null) {
+                    Toast.makeText(requireContext(), "Error: $validationError", Toast.LENGTH_LONG).show()
+                    return@setOnClickListener
+                }
+
+                // 2. Check for Sensitive Data
+                if (SafetyValidator.checkForSensitiveData(text)) {
+                    android.app.AlertDialog.Builder(requireContext())
+                        .setTitle("Sensitive Data Warning")
+                        .setMessage("This QR code contains sensitive data (e.g., password, key). Anyone who scans it can see this information.\n\nDo you want to continue?")
+                        .setPositiveButton("Generate") { _, _ ->
+                            performGeneration(text)
+                        }
+                        .setNegativeButton("Cancel", null)
+                        .show()
+                } else {
+                    performGeneration(text)
                 }
             } else {
                 Toast.makeText(requireContext(), "Please enter text", Toast.LENGTH_SHORT).show()
@@ -58,6 +70,17 @@ class GenerateFragment : Fragment() {
             currentBitmap?.let { bitmap ->
                 saveImageToGallery(bitmap)
             }
+        }
+    }
+
+    private fun performGeneration(text: String) {
+        try {
+            currentBitmap = generateQRCode(text)
+            binding.imageQr.setImageBitmap(currentBitmap)
+            binding.layoutActions.visibility = View.VISIBLE
+        } catch (e: WriterException) {
+            e.printStackTrace()
+            Toast.makeText(requireContext(), "Error generating QR code", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -93,7 +116,7 @@ class GenerateFragment : Fragment() {
 
     private fun saveImageToGallery(bitmap: Bitmap) {
         val filename = "QR_${System.currentTimeMillis()}.png"
-        var fos: java.io.OutputStream? = null
+        var fos: java.io.OutputStream?
         var imageUri: android.net.Uri? = null
 
         try {
@@ -126,7 +149,10 @@ class GenerateFragment : Fragment() {
     private fun generateQRCode(text: String): Bitmap {
         val width = 500
         val height = 500
-        val bitMatrix: BitMatrix = MultiFormatWriter().encode(text, BarcodeFormat.QR_CODE, width, height)
+        val hints = java.util.EnumMap<com.google.zxing.EncodeHintType, Any>(com.google.zxing.EncodeHintType::class.java)
+        hints[com.google.zxing.EncodeHintType.CHARACTER_SET] = "UTF-8"
+        
+        val bitMatrix: BitMatrix = MultiFormatWriter().encode(text, BarcodeFormat.QR_CODE, width, height, hints)
         val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565)
         for (x in 0 until width) {
             for (y in 0 until height) {

@@ -10,6 +10,11 @@ app:startDestination="@+id/navigation_scan" >
     android:label="@string/title_scan"
     tools:layout="@layout/fragment_scan" />
 <fragment
+    android:id="@+id/navigation_open_qr"
+    android:name="com.example.newqrcode.OpenQRFragment"
+    android:label="Open QR"
+    tools:layout="@layout/fragment_open_qr" />
+<fragment
     android:id="@+id/navigation_generate"
     android:name="com.example.newqrcode.GenerateFragment"
     android:label="@string/title_generate"

@@ -128,6 +128,9 @@ attr activeIndicatorLabelPadding
 attr activityAction
 attr activityChooserViewStyle
 attr activityName
+attr adSize
+attr adSizes
+attr adUnitId
 attr addElevationShadow
 attr alertDialogButtonGroupStyle
 attr alertDialogCenterButtons
@@ -1373,7 +1376,11 @@ attr yearStyle
 attr yearTodayStyle
 bool abc_action_bar_embed_tabs
 bool abc_config_actionMenuItemAllCaps
+bool enable_system_alarm_service_default
+bool enable_system_foreground_service_default
+bool enable_system_job_service_default
 bool mtrl_btn_textappearance_all_caps
+bool workmanager_test_configuration
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
@@ -1416,6 +1423,10 @@ color bright_foreground_inverse_material_dark
 color bright_foreground_inverse_material_light
 color bright_foreground_material_dark
 color bright_foreground_material_light
+color browser_actions_bg_grey
+color browser_actions_divider_color
+color browser_actions_text_color
+color browser_actions_title_color
 color button_material_dark
 color button_material_light
 color call_notification_answer_color
@@ -2244,6 +2255,8 @@ dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
 dimen appcompat_dialog_background_inset
+dimen browser_actions_context_menu_max_width
+dimen browser_actions_context_menu_min_padding
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
 dimen cardview_default_radius
@@ -3038,6 +3051,9 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable admob_close_button_black_circle_white_cross
+drawable admob_close_button_white_circle_black_cross
+drawable admob_close_button_white_cross
 drawable avd_hide_password
 drawable avd_show_password
 drawable btn_checkbox_checked_mtrl
@@ -3081,8 +3097,11 @@ drawable ic_call_answer_video
 drawable ic_call_answer_video_low
 drawable ic_call_decline
 drawable ic_call_decline_low
+drawable ic_check_circle
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
+drawable ic_gallery
+drawable ic_image_search
 drawable ic_keyboard_black_24dp
 drawable ic_m3_chip_check
 drawable ic_m3_chip_checked_circle
@@ -3096,6 +3115,7 @@ drawable ic_save
 drawable ic_scan
 drawable ic_search_black_24
 drawable ic_share
+drawable ic_warning
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
 drawable m3_bottom_sheet_drag_handle
@@ -3168,6 +3188,8 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable offline_dialog_background
+drawable offline_dialog_default_icon_42dp
 drawable scanner_overlay
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -3242,6 +3264,7 @@ id action_mode_close_button
 id action_text
 id actions
 id activity_chooser_view_content
+id ad_container
 id add
 id adjust_height
 id adjust_width
@@ -3273,8 +3296,17 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id browser_actions_header_text
+id browser_actions_menu_item_icon
+id browser_actions_menu_item_text
+id browser_actions_menu_items
+id browser_actions_menu_view
+id btn_copy
+id btn_gallery
 id btn_generate
+id btn_open
 id btn_save
+id btn_select_image
 id btn_share
 id buttonPanel
 id cache_measures
@@ -3401,10 +3433,12 @@ id horizontal_only
 id icon
 id icon_group
 id icon_only
+id icon_safety
 id ifRoom
 id ignore
 id ignoreRequest
 id image
+id image_placeholder
 id image_qr
 id immediateStop
 id included
@@ -3420,6 +3454,7 @@ id jumpToStart
 id labeled
 id layout
 id layout_actions
+id layout_warning
 id left
 id leftToRight
 id legacy
@@ -3504,6 +3539,7 @@ id navigation_bar_item_large_label_view
 id navigation_bar_item_small_label_view
 id navigation_generate
 id navigation_header_container
+id navigation_open_qr
 id navigation_scan
 id never
 id neverCompleteToEnd
@@ -3517,6 +3553,9 @@ id notification_background
 id notification_main_column
 id notification_main_column_container
 id off
+id offline_dialog_advertiser_name
+id offline_dialog_image
+id offline_dialog_text
 id on
 id onInterceptTouchReturnSwipe
 id open_search_bar_text_view
@@ -3650,10 +3689,15 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id text_content
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
+id text_instruction
 id text_result
+id text_safety_status
+id text_type
+id text_warning
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -3818,6 +3862,9 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout admob_empty_layout
+layout browser_actions_context_menu_page
+layout browser_actions_context_menu_row
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3834,7 +3881,9 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_scan_result
 layout fragment_generate
+layout fragment_open_qr
 layout fragment_scan
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
@@ -3895,6 +3944,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout offline_ads_dialog
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -3939,7 +3989,9 @@ string bottomsheet_action_expand_halfway
 string bottomsheet_drag_handle_clicked
 string bottomsheet_drag_handle_content_description
 string btn_generate
+string btn_open
 string btn_save
+string btn_search
 string btn_share
 string call_notification_answer_action
 string call_notification_answer_video_action
@@ -3970,12 +4022,18 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string copy_toast_msg
 string dest_title
 string error_a11y_label
+string error_handle_action
 string error_icon_content_description
+string error_no_app
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string fallback_menu_item_copy_link
+string fallback_menu_item_open_in_browser
+string fallback_menu_item_share_link
 string hide_bottom_view_on_scroll_behavior
 string hint_enter_text
 string icon_content_description
@@ -4018,6 +4076,7 @@ string material_timepicker_minute
 string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
+string msg_copied
 string mtrl_badge_numberless_content_description
 string mtrl_checkbox_button_icon_path_checked
 string mtrl_checkbox_button_icon_path_group_name
@@ -4080,14 +4139,34 @@ string mtrl_switch_track_decoration_path
 string mtrl_switch_track_path
 string mtrl_timepicker_cancel
 string mtrl_timepicker_confirm
+string native_body
+string native_headline
+string native_media_view
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
+string notifications_permission_confirm
+string notifications_permission_decline
+string notifications_permission_title
+string offline_dialog_image_description
+string offline_dialog_text
+string offline_notification_title
+string offline_opt_in_confirm
+string offline_opt_in_decline
+string offline_opt_in_message
+string offline_opt_in_title
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string permission_camera_rationale
+string s1
+string s2
+string s3
+string s4
+string s5
+string s6
+string s7
 string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description
@@ -4095,8 +4174,11 @@ string searchview_navigation_content_description
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string status_bar_notification_info_overflow
+string status_risk
+string status_safe
 string title_generate
 string title_scan
+string watermark_label_prefix
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
@@ -4649,6 +4731,7 @@ style Theme_Design_Light
 style Theme_Design_Light_BottomSheetDialog
 style Theme_Design_Light_NoActionBar
 style Theme_Design_NoActionBar
+style Theme_IAPTheme
 style Theme_Material3_Dark
 style Theme_Material3_Dark_BottomSheetDialog
 style Theme_Material3_Dark_Dialog
@@ -5224,6 +5307,7 @@ styleable ActivityChooserView expandActivityOverflowButtonDrawable initialActivi
 styleable ActivityFilter activityAction activityName
 styleable ActivityNavigator android_name action data dataPattern targetPackage
 styleable ActivityRule alwaysExpand
+styleable AdsAttrs adSize adSizes adUnitId
 styleable AlertDialog android_layout buttonIconDimen buttonPanelSideLayout listItemLayout listLayout multiChoiceItemLayout showTitle singleChoiceItemLayout
 styleable AnimatedStateListDrawableCompat android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration
 styleable AnimatedStateListDrawableItem android_id android_drawable
@@ -5390,3 +5474,6 @@ styleable include constraintSet
 xml backup_rules
 xml data_extraction_rules
 xml file_paths
+xml gma_ad_services_config
+xml image_share_filepaths
+xml network_security_config

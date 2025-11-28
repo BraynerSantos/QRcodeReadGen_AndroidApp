@@ -2,7 +2,6 @@ package com.example.newqrcode
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.newqrcode.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -22,5 +21,16 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
         
         navView.setupWithNavController(navController)
+
+        com.google.android.gms.ads.MobileAds.initialize(this) {}
+        
+        val adView = com.google.android.gms.ads.AdView(this)
+        adView.setAdSize(com.google.android.gms.ads.AdSize.BANNER)
+        adView.adUnitId = BuildConfig.API_KEY
+        
+        binding.adContainer.addView(adView)
+        
+        val adRequest = com.google.android.gms.ads.AdRequest.Builder().build()
+        adView.loadAd(adRequest)
     }
 }

@@ -6,5 +6,12 @@
     <string name="btn_generate">Generate QR</string>
     <string name="btn_share">Share</string>
     <string name="btn_save">Save</string>
+    <string name="status_safe">Safe Content</string>
+    <string name="status_risk">Potential Risk Detected</string>
+    <string name="msg_copied">Copied to clipboard</string>
+    <string name="error_no_app">Cannot open this content type directly.</string>
+    <string name="error_handle_action">No app found to handle this action.</string>
     <string name="permission_camera_rationale">Camera permission is needed to scan QR codes.</string>
+    <string name="btn_open">Open</string>
+    <string name="btn_search">Search</string>
 </resources>
