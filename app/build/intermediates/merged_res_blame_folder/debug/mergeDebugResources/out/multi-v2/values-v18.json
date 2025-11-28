@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.newqrcode.app-mergeDebugResources-61:/values-v18/values-v18.xml",
+            "outputFile": "com.example.newqrcode.app-mergeDebugResources-54:/values-v18/values-v18.xml",
             "map": [
                 {
                     "source": "C:\\Users\\santo\\.gradle\\caches\\9.0-milestone-1\\transforms\\2ae65bfdbee657ea53185f3721d8275a\\transformed\\appcompat-1.6.1\\res\\values-v18\\values-v18.xml",

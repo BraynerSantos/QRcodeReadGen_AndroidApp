@@ -4,7 +4,6 @@ package com.example.newqrcode.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -22,19 +21,15 @@ public final class ActivityMainBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final FrameLayout adContainer;
-
-  @NonNull
   public final FragmentContainerView navHostFragmentActivityMain;
 
   @NonNull
   public final BottomNavigationView navView;
 
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull FrameLayout adContainer,
+  private ActivityMainBinding(@NonNull ConstraintLayout rootView,
       @NonNull FragmentContainerView navHostFragmentActivityMain,
       @NonNull BottomNavigationView navView) {
     this.rootView = rootView;
-    this.adContainer = adContainer;
     this.navHostFragmentActivityMain = navHostFragmentActivityMain;
     this.navView = navView;
   }
@@ -66,12 +61,6 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.ad_container;
-      FrameLayout adContainer = ViewBindings.findChildViewById(rootView, id);
-      if (adContainer == null) {
-        break missingId;
-      }
-
       id = R.id.nav_host_fragment_activity_main;
       FragmentContainerView navHostFragmentActivityMain = ViewBindings.findChildViewById(rootView, id);
       if (navHostFragmentActivityMain == null) {
@@ -84,8 +73,8 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, adContainer,
-          navHostFragmentActivityMain, navView);
+      return new ActivityMainBinding((ConstraintLayout) rootView, navHostFragmentActivityMain,
+          navView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

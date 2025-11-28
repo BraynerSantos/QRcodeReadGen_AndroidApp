@@ -37,10 +37,6 @@ class ScanFragment : Fragment() {
             }
         }
 
-    private val pickImageLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: android.net.Uri? ->
-        uri?.let { processImage(it) }
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -53,10 +49,6 @@ class ScanFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         cameraExecutor = Executors.newSingleThreadExecutor()
 
-        binding.btnGallery.setOnClickListener {
-            pickImageLauncher.launch("image/*")
-        }
-
         if (ContextCompat.checkSelfPermission(
                 requireContext(),
                 Manifest.permission.CAMERA
@@ -65,27 +57,6 @@ class ScanFragment : Fragment() {
             startCamera()
         } else {
             requestPermissionLauncher.launch(Manifest.permission.CAMERA)
-        }
-    }
-
-    private fun processImage(uri: android.net.Uri) {
-        try {
-            val image = InputImage.fromFilePath(requireContext(), uri)
-            val scanner = BarcodeScanning.getClient()
-            scanner.process(image)
-                .addOnSuccessListener { barcodes ->
-                    if (barcodes.isNotEmpty()) {
-                        showResult(barcodes[0].rawValue ?: "")
-                    } else {
-                        Toast.makeText(requireContext(), "No QR code found", Toast.LENGTH_SHORT).show()
-                    }
-                }
-                .addOnFailureListener {
-                    Toast.makeText(requireContext(), "Failed to scan image", Toast.LENGTH_SHORT).show()
-                }
-        } catch (e: java.io.IOException) {
-            e.printStackTrace()
-            Toast.makeText(requireContext(), "Error loading image", Toast.LENGTH_SHORT).show()
         }
     }
 

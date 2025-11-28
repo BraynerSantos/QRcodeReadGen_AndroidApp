@@ -3,14 +3,14 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
+import java.util.Properties
+import java.io.FileInputStream
+
 android {
     namespace = "com.example.newqrcode"
     compileSdk = 34
 
     defaultConfig {
-        val apiKey: String = (project.findProperty("API_KEY") as String? ?: "").replace("\"", "")
-        buildConfigField("String", "API_KEY", "\"$apiKey\"")
-
         applicationId = "com.example.newqrcode"
         minSdk = 24
         targetSdk = 34
@@ -65,9 +65,6 @@ dependencies {
 
     // ZXing for generation
     implementation("com.google.zxing:core:3.5.2")
-
-    // Google Mobile Ads
-    implementation("com.google.android.gms:play-services-ads:23.0.0")
 
     // Guava for ListenableFuture (CameraX)
     implementation("com.google.guava:guava:31.1-android")

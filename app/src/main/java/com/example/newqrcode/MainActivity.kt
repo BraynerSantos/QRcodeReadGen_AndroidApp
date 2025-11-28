@@ -21,16 +21,5 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
         
         navView.setupWithNavController(navController)
-
-        com.google.android.gms.ads.MobileAds.initialize(this) {}
-        
-        val adView = com.google.android.gms.ads.AdView(this)
-        adView.setAdSize(com.google.android.gms.ads.AdSize.BANNER)
-        adView.adUnitId = BuildConfig.API_KEY
-        
-        binding.adContainer.addView(adView)
-        
-        val adRequest = com.google.android.gms.ads.AdRequest.Builder().build()
-        adView.loadAd(adRequest)
     }
 }

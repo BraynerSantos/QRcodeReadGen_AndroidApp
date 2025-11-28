@@ -16,9 +16,7 @@ drawable ic_scan
 drawable ic_share
 drawable ic_warning
 drawable scanner_overlay
-id ad_container
 id btn_copy
-id btn_gallery
 id btn_generate
 id btn_open
 id btn_save
