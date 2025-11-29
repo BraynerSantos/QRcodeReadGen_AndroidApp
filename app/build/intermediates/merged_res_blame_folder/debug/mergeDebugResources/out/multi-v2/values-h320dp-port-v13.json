@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.newqrcode.app-mergeDebugResources-54:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
+            "outputFile": "com.brayner.qrscanner.app-mergeDebugResources-54:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\santo\\.gradle\\caches\\9.0-milestone-1\\transforms\\2290c1ebd299d7a0da84cc6ce313e9ba\\transformed\\material-1.11.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
+                    "source": "C:\\Users\\santo\\.gradle\\caches\\9.0-milestone-1\\transforms\\3beb151ef92d7b70e03040518b424f1b\\transformed\\material-1.13.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

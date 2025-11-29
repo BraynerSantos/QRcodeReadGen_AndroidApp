@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.newqrcode"
+    package="com.brayner.qrscanner"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
         android:minSdkVersion="24"
-        android:targetSdkVersion="34" />
+        android:targetSdkVersion="36" />
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -18,10 +18,10 @@
         android:maxSdkVersion="28" />
 
     <permission
-        android:name="com.example.newqrcode.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:name="com.brayner.qrscanner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.example.newqrcode.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+    <uses-permission android:name="com.brayner.qrscanner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
     <!-- <uses-sdk android:minSdkVersion="14"/> -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -41,7 +41,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.NewQRcode" >
         <activity
-            android:name="com.example.newqrcode.MainActivity"
+            android:name="com.brayner.qrscanner.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -53,7 +53,7 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.example.newqrcode.fileprovider"
+            android:authorities="com.brayner.qrscanner.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data
@@ -86,12 +86,22 @@
 
         <provider
             android:name="com.google.mlkit.common.internal.MlKitInitProvider"
-            android:authorities="com.example.newqrcode.mlkitinitprovider"
+            android:authorities="com.brayner.qrscanner.mlkitinitprovider"
             android:exported="false"
             android:initOrder="99" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
         <provider
             android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.example.newqrcode.androidx-startup"
+            android:authorities="com.brayner.qrscanner.androidx-startup"
             android:exported="false" >
             <meta-data
                 android:name="androidx.emoji2.text.EmojiCompatInitializer"
@@ -103,15 +113,6 @@
                 android:name="androidx.profileinstaller.ProfileInstallerInitializer"
                 android:value="androidx.startup" />
         </provider>
-
-        <activity
-            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-            android:exported="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
 
         <uses-library
             android:name="androidx.window.extensions"
